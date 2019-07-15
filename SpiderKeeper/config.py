@@ -33,7 +33,10 @@ LOG_LEVEL = 'INFO'
 
 # spider services
 SERVER_TYPE = 'scrapyd'
-SERVERS = ['http://localhost:6800']
+SERVERS = [
+    'http://localhost:6800',
+    'http://localhost:6868'
+]
 
 # basic auth
 NO_AUTH = False

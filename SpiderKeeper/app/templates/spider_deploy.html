@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content_header %}
-<h1>Deploy</h1>
+<h1>部署项目</h1>
 {% endblock %}
 {% block content_body %}
 
@@ -20,15 +20,17 @@
     <form action="/project/{{ project.id }}/spider/upload" method="post" enctype=multipart/form-data>
         <div class="box-body">
             <div class="form-group">
-                <label for="egg-file"><h4>Upload EGG file</h4></label>
+                <label for="egg-file"><h4>上传 EGG 文件</h4></label>
                 <input type="file" name="file" id="egg-file">
 
-                <p class="help-block">Use <a href="https://github.com/scrapy/scrapyd-client" target="_blank">scrapyd-client</a>
-                    to generate egg file <code>scrapyd-deploy --build-egg output.egg</code></p>
+                <p class="help-block">使用
+                    <a href="https://github.com/scrapy/scrapyd-client" target="_blank">scrapyd-client</a>
+                    生成 egg 文件 </p>
+                <p><code>$ scrapyd-deploy --build-egg output.egg</code></p>
             </div>
         </div>
         <div class="box-footer">
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">确认上传</button>
         </div>
     </form>
 </div>

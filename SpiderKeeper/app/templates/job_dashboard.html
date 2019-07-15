@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% block content_header %}
-<h1>Job Dashboard</h1>
+<h1>任务控制台</h1>
 <ol style="float: right;
     margin-top: 0;
     margin-bottom: 0;
@@ -10,7 +10,7 @@
     top: 15px;
     right: 10px;">
     <button type="button" class="btn btn-success btn-flat" style="margin-top: -10px;" data-toggle="modal"
-            data-target="#job-run-modal">RunOnce
+            data-target="#job-run-modal">运行一次
     </button>
 </ol>
 {% endblock %}
@@ -18,7 +18,7 @@
 <!--======next job======-->
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Next Jobs</h3>
+        <h3 class="box-title">等待任务</h3>
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
             </button>
@@ -71,7 +71,7 @@
 <!--======running job======-->
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Running Jobs</h3>
+        <h3 class="box-title">正在运行任务</h3>
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
             </button>
@@ -137,7 +137,7 @@
 <!--======completed job======-->
 <div class="box">
     <div class="box-header">
-        <h3 class="box-title">Completed Jobs</h3>
+        <h3 class="box-title">已完成任务</h3>
         <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
             </button>

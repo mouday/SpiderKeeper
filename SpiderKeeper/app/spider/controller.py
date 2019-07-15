@@ -630,7 +630,7 @@ def spider_deploy(project_id):
     project = Project.find_project_by_id(project_id)
     return render_template("spider_deploy.html")
 
-
+# 上传egg
 @app.route("/project/<project_id>/spider/upload", methods=['post'])
 def spider_egg_upload(project_id):
     project = Project.find_project_by_id(project_id)
@@ -641,12 +641,18 @@ def spider_egg_upload(project_id):
     # if user does not select file, browser also
     # submit a empty part without filename
     if file.filename == '':
+        # 消息闪现
         flash('No selected file')
         return redirect(request.referrer)
     if file:
+
+        # 返回安全的文件名
         filename = secure_filename(file.filename)
+
+        # 保存到临时文件
         dst = os.path.join(tempfile.gettempdir(), filename)
         file.save(dst)
+
         agent.deploy(project, dst)
         flash('deploy success!')
     return redirect(request.referrer)
